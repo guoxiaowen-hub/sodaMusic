@@ -1,0 +1,44 @@
+/* 用户信息 */
+.userinfo {
+  display: flex;
+  flex-flow: column;
+  margin-top: 50px;
+  border: solid 0px #000;
+}
+/* 用户头像 */
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+/* 下方功能 */
+.function{
+  width: 80%;
+  /* margin: 0px 0px;    */
+  height:auto; /*50*/
+  border:solid 0px #ffffff;   /**/
+  margin: 30px auto;
+  /* padding: 100px; */
+  display: flex;
+  flex-flow: column;
+}
+.functionList{
+  width: 80%;
+  height: auto;
+  margin: 10px auto;
+  padding: 7px;
+  background-color: #6EB8A2;
+  border-radius:20px;
+}
+
+
+
+
+.font {
+  font-size: 12px;
+  color: #E2F1EC;
+  text-align: center;
+  line-height: 20px;
+  white-space:nowrap; 
+}

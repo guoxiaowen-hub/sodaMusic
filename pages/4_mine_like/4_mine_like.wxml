@@ -1,0 +1,12 @@
+<view>
+
+  <view class="title">我的收藏</view>
+
+  <view class="list">  
+    <view class="eachRow font" wx:for="{{likeArray}}" wx:key="id">
+      <view>{{item.likeArray.song}} -- {{item.likeArray.singer}} · {{item.likeArray.album}}</view>
+    </view>
+  </view>
+
+
+</view>

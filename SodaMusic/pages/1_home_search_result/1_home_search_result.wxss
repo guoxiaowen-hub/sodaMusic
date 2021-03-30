@@ -1,0 +1,76 @@
+/* 歌手名 */
+.recommend{
+  width: auto;
+  margin:0px auto;
+  font-size: 12px;
+  border: solid 0px #ffffff;   /**/
+  text-align: center;
+  padding: 5px;
+  color: #ffffff;
+}
+
+/* 上侧图片 */
+.img_bg{
+  width: 100%;
+  height: 180px;
+  border-radius:5px;
+  border: solid 1px #E2F1EC;
+  position: relative;
+}
+.singer_img{
+  width: 100%;
+  height: 180px;
+  border-radius:5px;
+  border: solid 0px #E2F1EC;
+  /* display: none; */
+
+}
+.img_bg > .img_text_bg{
+  width: 100px;
+  height: 30px;
+  border-radius:5px;
+  position: relative;
+ margin:-40px auto;
+  background: #499A86;
+  z-index: 10;
+}
+.img_text{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #E2F1EC;
+  z-index: 12;
+}
+
+/* 歌曲列表 */
+.singerList{
+  margin:auto auto;
+  width: 90%;
+  height:1200px;
+}
+/* 每首歌 */
+.singer_songlist{
+  width: 80%;
+  background-color: #6EB8A2;
+  border-radius:5px;
+  margin: 5px auto;
+  padding: 1px 10px;
+}
+/* 歌名字体 */
+.font1 {
+  font-size: 12px;
+  color: #FEFEFE;
+  line-height: 23px;
+  overflow:hidden;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}
+/* 歌手专辑字体 */
+.font2 {
+  font-size: 12px;
+  color: #a8e2cc;
+  line-height: 23px;
+  overflow:hidden;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}

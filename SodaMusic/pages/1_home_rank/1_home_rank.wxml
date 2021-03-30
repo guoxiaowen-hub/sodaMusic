@@ -1,0 +1,27 @@
+<view>
+  <view class="recommend white">———— 热门榜单推荐 ————</view>
+
+  <view class="rankList">
+      <view class="img_bg">
+        <image mode="aspectFill" src="{{image}}" class="rank_img" ></image>
+        <view class="img_text_bg">
+          <view class="img_text" bindtap="musicAllPlay">播放全部</view>
+        </view>
+      </view>
+      
+      <view class="rank" wx:for="{{songList}}" wx:for-item="songList" wx:for-index="songIndex" wx:key="id" >
+        <view class="rank_bg" bindtap="play" data-index="{{songIndex}}"  >
+          <view class="rank_song font">{{songList.data.songname}}</view>
+          <view class="rank_singer font">
+            <block wx:for="{{songList.data.singer}}" wx:for-item="singer" wx:for-index="singerIndex" wx:key="id">
+              <text>{{singer.name}}</text>
+              <block wx:if="{{singerIndex + 1 < songList.data.singer.length}}">
+                <text> / </text>
+              </block>
+              <block wx:else> 《{{songList.data.albumname}}》</block>
+            </block>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>

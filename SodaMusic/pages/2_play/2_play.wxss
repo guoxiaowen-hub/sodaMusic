@@ -1,0 +1,136 @@
+.box-container{
+  height: 100%;
+  border:0px #000 solid;
+
+}
+
+/* 封面专辑样式 */
+.imageitem1{
+  display: flex;
+  justify-content: center;
+  border:0px red solid;
+}
+.imageitem2{
+  display: flex;
+  justify-content: center;
+  border:0px red solid;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes move{       
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+.image-top {
+  width: 75vw;
+  height: 75vw;
+  margin-top: 8vw;
+  margin-bottom: 5vw;
+  border-radius: 50%;
+}
+
+/* 歌单列表 */
+.list-container{
+  border-radius: 8px;
+  height: 50vh;
+  background-color: #5CA492;
+  padding-top: 30px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50vw;
+  overflow: scroll;
+}
+.list-box {
+  z-index: 0;
+  height: 20px;
+  color: #E2F1EC;
+  padding: 2px 10px;
+  overflow: hidden;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}
+.list-button{
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
+  color: #388E7C;
+}
+
+
+
+
+
+/* 歌曲名 */
+.songName{
+  height: 10vw;
+  line-height: 10vw;
+  text-align: center;
+  font-size: 18px;
+  color: #E2F1EC;
+  border:0px #000 solid;
+}
+/* 歌手名 */
+.singer{
+  height: 8vw;
+  line-height: 8vw;
+  text-align: center;
+  font-size: 12px;
+  color: #D8ECE6;
+  border:0px red solid;
+  margin-bottom: 2vw;
+}
+
+
+/* 进度条栏 */
+.progress_box{
+  width: auto;
+  height: 10vw;
+  margin: auto;
+  display: flex;
+  flex-flow: row;
+  border: 0px solid;
+}
+.left_time{
+  height: 12vw;
+  line-height: 12vw;
+  margin-left: 8vw;
+  text-align: center;
+  font-size: 12px;
+  color: #D8ECE6;
+}
+.progress{
+  width: 60%;
+  margin: auto;
+}
+.right_time{
+  height: 12vw;
+  line-height: 12vw;
+  margin-right: 8vw;
+  text-align: center;
+  font-size: 12px;
+  color: #D8ECE6;
+}
+
+
+
+
+/* 下图标的样式 */
+.icon-box {
+  margin-top: 4vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.icon-bottom > image {
+  width: 40px;
+  height: 40px;
+}
+.none{
+  pointer-events: none;
+}

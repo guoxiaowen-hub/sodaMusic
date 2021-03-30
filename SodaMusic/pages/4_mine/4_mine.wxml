@@ -1,0 +1,20 @@
+<!-- container的样式是在app.wxss里设置的 -->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <!-- 用户头像 -->
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <!-- 用户昵称 -->
+      <text class="font">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="function">
+    <view class="functionList font" bindtap="myLike">我的收藏</view>
+    <view class="functionList font">个性装扮</view>
+    <view class="functionList font">软件设置</view>
+    <view class="functionList font">退出登录</view>
+  </view>
+
+</view>

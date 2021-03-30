@@ -1,0 +1,34 @@
+.title{
+  margin-top: 15px;
+  font-size: 15px;
+  color: #E2F1EC;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+
+}
+.list{
+  border: 0px solid #000;
+  display: flex;
+  flex-flow: column;
+  margin: 15px 15px;
+  background: #6EB8A2;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.eachRow{
+  border: 0px solid #000;
+  width: 100%;
+  margin: 5px auto;
+}
+
+.font {
+  font-size: 12px;
+  color: #E2F1EC;
+  line-height: 20px;
+  overflow:hidden;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}

@@ -1,0 +1,64 @@
+<view>
+  <view class="blank"></view>
+
+  <!-- 搜索框 -->
+  <view class="search">
+    <input class="search_input" type="text" focus="{{true}}"  placeholder="请输入歌曲名或歌手名" placeholder-class="placeholder" bindinput="input" ></input>
+  <view class="search_button font" catchtap="search">搜索</view>
+  <!-- 搜索框下拉表 -->
+  <scroll-view class="scroll font" hidden="{{hideScroll}}" >
+    <!-- 下拉表 -->
+    <view class="singer-scroll"
+          bindtap="singerTap"
+          data-index="{{index}}"
+          wx:for = "{{singer}}"
+          wx:key = "mid">
+    <image class="singer-image" src="{{item.pic}}" />
+    <view>{{item.name}}</view>
+    </view>
+    <view class = "song-scroll"
+          bindtap = "songTap"
+          data-index = "{{index}}"
+          wx:for = "{{song}}"
+          wx:key = "mid">
+    <view class = "song-scroll-item">
+      <view class = "song-scroll-title">单曲</view>
+      <view class = "song-scroll-text">{{item.name}}</view>
+    </view>
+    </view>
+  </scroll-view>
+  </view>
+
+  <view class="blank"></view>
+
+  <!-- <Tabs> -->
+    <!-- 热搜推荐 -->
+    <view class="hotkey_bg">
+      <view class="hotkey_title font">热门搜索：</view>
+      <view class="hotkey_songbg"> 
+        <view wx:for="{{hotkey}}" wx:for-item="hotkey" wx:for-index="hotkeyIndex" wx:key="id" wx:if="{{hotkeyIndex<10}}" class="hotkey_eachbg font">
+          <view>{{hotkey.k}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 历史记录板块 -->
+    <view class="history_bg">
+      <view class="history_titleboard">
+        <view class="history_title font">历史搜索：</view>
+        <view class="history_clear font" bindtap="hisClr">清空记录</view>
+      </view>
+        <view wx:for="{{getStorage}}" class="history_list font" wx:key="id">{{item.storage}}</view>
+        <view class="blank"></view>
+        <view class="mark font" hidden="{{hideHistory}}">暂无历史记录</view>
+    </view>
+  <!-- </Tabs> -->
+
+
+
+
+
+
+
+
+</view>

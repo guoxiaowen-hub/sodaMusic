@@ -1,0 +1,45 @@
+/* 分栏标题 */
+.title{
+  background-color: #6EB8A2;
+  color: #fff;
+  font-size: 15px;
+  padding-left: 8vw;
+  margin-bottom: 3vw;
+  border-bottom: 1px solid #499A86;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+}
+/* 热门歌手box */
+.hot_box{
+  width: 90%;
+  margin: auto;
+  padding: 5px 30px;
+  display: flex;
+  flex-grow: row;
+  border: 0px solid #000;
+}
+/* 热门歌手图片 */
+.image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 0px solid #000;
+}
+/* 热门歌手文字 */
+.text{
+  /* border-bottom: 1px solid #6EB8A2; */
+  color: #E2F1EC;
+  font-size: 14px;
+  padding-left: 8vw;
+  height: 50px;
+  line-height: 50px;
+}
+
+/* 文字 */
+.font {
+  line-height: 20px;
+  overflow:hidden;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+}

@@ -1,0 +1,93 @@
+<view class="box-container">
+
+  <!-- 封面图片 -->
+  <view class="{{imageitem}}">
+    <image class="image-top" mode="aspectFill" src="../../static/image/tabBar/光盘_0.png"></image>
+  </view>
+
+  <!-- 歌单列表 -->
+  <view class="list-container" hidden="{{isList}}">
+  <view class="list-box"
+        wx:for="{{songArray}}"
+        wx:key="songmid">
+    {{item.song}}
+  </view>
+</view>
+<image class="list-button" src="../../static/image/musicPlay/列表_0.png" bindtap="listTap"></image>
+
+
+  <!-- 歌曲名 -->
+    <view class="songName">{{music.song}}</view>
+
+  <!-- 歌手名 -->
+  <view class="singer">
+    <block wx:for="{{music.singer}}" wx:key="id">
+        <block wx:if="{{index === music.singer.length-1}}">
+        <text>{{item.name}} -《{{music.album}}》</text>
+        </block>
+        <block wx:else>
+          <text>{{item.name}} / </text>
+        </block>
+
+      </block>
+    </view>
+
+  <!-- 进度条 -->
+  <view class="progress_box">
+    <!-- 左边显示的时间 -->
+		<view class="left_time">{{currentTime}}</view>
+		<view class="progress">
+			<slider bindchange="changed1" min="0" max="{{max}}" bindchanging="changing" value="{{value}}" block-size="12" />
+    </view>
+    <!-- 右边显示的总时间 -->
+		<view class="right_time">{{totalTime}}</view>
+  </view>
+  
+  
+    <!-- 播放相关按钮 -->
+    <view class="icon-box">
+      <!-- 播放模式 -->
+      <view class="icon-bottom"  bindtap="moduleChange" hidden="{{playStatus == 0 ? false:true}}">
+        <image mode="aspectFill" src="../../static/image/musicPlay/顺序播放_0.png"></image>
+      </view>
+      <view class="icon-bottom"  bindtap="moduleChange" hidden="{{playStatus == 1 ? false:true}}">
+        <image mode="aspectFill" src="../../static/image/musicPlay/列表循环_0.png"></image>
+      </view>
+      <view class="icon-bottom"  bindtap="moduleChange" hidden="{{playStatus == 2 ? false:true}}">
+        <image mode="aspectFill" src="../../static/image/musicPlay/随机播放_0.png"></image>
+      </view>
+      <view class="icon-bottom"  bindtap="moduleChange" hidden="{{playStatus == 3 ? false:true}}">
+        <image mode="aspectFill" src="../../static/image/musicPlay/单曲循环_0.png"></image>
+      </view>
+      <!-- 上一首 -->
+      <view class="icon-bottom" bindtap="musicLastTap">
+        <image mode="aspectFill" src="../../static/image/musicPlay/上一首_0.png"></image>
+      </view>
+      <!-- 播放/暂停 -->
+      <view class="icon-bottom" bindtap="musicPlayTap">
+        <block wx:if="{{isPlaying === true}}">
+          <image mode="aspectFill" src="../../static/image/musicPlay/暂停_0.png"></image>
+        </block>
+        <block wx:elif="{{isPlaying === false}}">
+          <image mode="aspectFill" src="../../static/image/musicPlay/播放_0.png"></image>
+        </block>
+      </view>
+      <!-- 下一首 -->
+      <view class="icon-bottom"  bindtap="musicNextTap">
+        <image mode="aspectFill" src="../../static/image/musicPlay/下一首_0.png"></image>
+      </view>
+      <!-- 收藏 -->
+
+     
+      <view class="icon-bottom" bindtap="musicLike">
+          <block wx:if="{{music.islike == false}}">
+            <image mode="aspectFill" src="../../static/image/musicPlay/收藏_0.png"></image>
+          </block>
+          <block wx:elif="{{music.islike == true}}">
+            <image mode="aspectFill" src="../../static/image/musicPlay/收藏_1.png"></image>
+          </block>
+      </view>
+  </view>
+
+
+</view>

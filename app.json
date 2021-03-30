@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/1_home/1_home",
+    "pages/1_home_rank/1_home_rank",
+    "pages/1_home_search/1_home_search",
+    "pages/1_home_search_result/1_home_search_result",
+    "pages/2_play/2_play",
+    "pages/3_singer/3_singer",
+    "pages/4_mine/4_mine",
+    "pages/4_mine_like/4_mine_like"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#499A86",
+    "navigationBarTitleText": "SodaMusic",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/1_home/1_home",
+        "iconPath": "static/image/tabBar/首页_0.png",
+        "selectedIconPath": "static/image/tabBar/首页_1.png"
+      },
+      {
+        "text": "音乐",
+        "pagePath": "pages/2_play/2_play",
+        "iconPath": "static/image/tabBar/光盘_0.png",
+        "selectedIconPath": "static/image/tabBar/光盘_1.png"
+      },
+      {
+        "text": "歌手",
+        "pagePath": "pages/3_singer/3_singer",
+        "iconPath": "static/image/tabBar/歌手_0.png",
+        "selectedIconPath": "static/image/tabBar/歌手_1.png"
+      },
+      {
+        "text": "个人",
+        "pagePath": "pages/4_mine/4_mine",
+        "iconPath": "static/image/tabBar/我的_0.png",
+        "selectedIconPath": "static/image/tabBar/我的_1.png"
+      }
+    ],
+    "position": "bottom",
+    "backgroundColor": "#499A86",
+    "color": "#8AC6B5",
+    "selectedColor": "#ffffff"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": ["audio", "location"]
+
+}

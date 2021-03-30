@@ -1,0 +1,14 @@
+<view>
+    <!-- 热门歌手 -->
+  <view class="title">热门歌手</view>
+  <view class="hot_box" bindtap = "singerTap" data-index = "{{index}}" wx:for="{{hotList}}" wx:key="id">
+    <image class="image" src="{{item.picUrl}}"></image>
+    <view class="text ">{{item.Fsinger_name}}</view>
+  </view>
+
+  <!-- 全部歌手 -->
+  <view wx:for="{{countArray}}"
+        wx:key="id">
+    <Tabs singerlist="{{singerList}}" title="{{item.title}}"> </Tabs>
+  </view>
+</view>
